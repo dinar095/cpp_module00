@@ -14,10 +14,12 @@
 # define CLASS_CONTACT_H
 
 # include <string>
+# include <iostream>
+
 class Contact
 {
-	static int id;
 private:
+	int id;
 	std::string first_name;
 	std::string last_name;
 	std::string nickname;
@@ -29,6 +31,13 @@ public:
 	void	set_nickname(std::string value);
 	void	set_phone_number(std::string value);
 	void	set_darkset_secret(std::string value);
-	void 	count();
+	void 	set_id(std::string value);
+	std::string get_first_name() {return first_name;}
+	std::string get_last_name() {return last_name;}
+	std::string get_nickname() {return nickname;}
+	std::string get_phone_number() {return phone_number;}
+	std::string get_darkset_secret() {return darkset_secret;}
+	void fieldContact(int index);
 };
+//using std::string;
 #endif

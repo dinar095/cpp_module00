@@ -14,30 +14,45 @@
 
 void Contact::set_first_name(std::string value)
 {
-	this->first_name = value;
+	first_name = value;
 }
 
 void Contact::set_last_name(std::string value)
 {
-	this->last_name = value;
+	last_name = value;
 }
 
 void Contact::set_nickname(std::string value)
 {
-	this->nickname = value;
+	nickname = value;
 }
 
 void Contact::set_phone_number(std::string value)
 {
-	this->phone_number = value;
+	phone_number = value;
 }
 
 void Contact::set_darkset_secret(std::string value)
 {
-	this->darkset_secret = value;
+	darkset_secret = value;
 }
 
-void Contact::count()
+void Contact::set_id(std::string value)
 {
-	this->id++;
+	darkset_secret = value;
+}
+
+void Contact::fieldContact(int index)
+{
+	id = index;
+	std::cout << "First name: ";
+	std::getline(std::cin, first_name);
+	std::cout << "Last name: ";
+	std::getline(std::cin, last_name);
+	std::cout << "Nickname: ";
+	std::getline(std::cin, nickname);
+	std::cout << "Phone_number: ";
+	std::getline(std::cin, phone_number);
+	std::cout << "Darkest secret: ";
+	std::getline(std::cin, darkset_secret);
 }
