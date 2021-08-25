@@ -47,12 +47,16 @@ void Contact::fieldContact(int index)
 	id = index;
 	std::cout << "First name: ";
 	std::getline(std::cin, first_name);
+
 	std::cout << "Last name: ";
 	std::getline(std::cin, last_name);
+
 	std::cout << "Nickname: ";
 	std::getline(std::cin, nickname);
+
 	std::cout << "Phone_number: ";
 	std::getline(std::cin, phone_number);
+
 	std::cout << "Darkest secret: ";
 	std::getline(std::cin, darkset_secret);
 }
