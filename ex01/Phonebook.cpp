@@ -40,6 +40,6 @@ void Phonebook::expandContact()
 		std::getline(std::cin, buf);
 		if (buf.empty())
 			break;
-		if ()
+		if (buf.)
 	}
 }
