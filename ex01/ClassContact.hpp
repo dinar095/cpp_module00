@@ -15,6 +15,7 @@
 
 # include <string>
 # include <iostream>
+# include <iomanip>
 
 class Contact
 {
@@ -37,6 +38,8 @@ public:
 	std::string get_nickname() {return nickname;}
 	std::string get_phone_number() {return phone_number;}
 	std::string get_darkset_secret() {return darkset_secret;}
+	void preview();
+	void view();
 	void fieldContact(int index);
 };
 //using std::string;

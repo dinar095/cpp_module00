@@ -7,9 +7,13 @@ class Phonebook
 {
 private:
 	Contact	*contact;
+	unsigned int	index;
+	unsigned int	count;
 public:
 	void	set_contact(Contact *value);
-	void	addContact(int &index);
+	void	addContact(unsigned int maxindex);
+	void	showContacts();
+	void	expandContact();
 };
 
 

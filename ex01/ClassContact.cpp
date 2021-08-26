@@ -61,3 +61,22 @@ void Contact::fieldContact(int index)
 	std::cout << "Darkest secret: ";
 	std::getline(std::cin, darkset_secret);
 }
+
+void Contact::preview()
+{
+	std::cout << std::right << std::setw(10) << id << "|";
+	std::cout << std::right << std::setw(10) << first_name << "|";
+	std::cout << std::right << std::setw(10) << last_name << "|";
+	std::cout << std::right << std::setw(10) << nickname << "|" << std::endl;
+//	std::cout << std::right << std::setw(10) << phone_number << "|";
+//	std::cout << std::right << std::setw(10) << darkset_secret << "|";
+}
+
+void Contact::view()
+{
+	std::cout << "First name: " << first_name << std::endl;
+	std::cout << "Last name: " << last_name << std::endl;
+	std::cout << "Nickname: " << nickname << std::endl;
+	std::cout << "Phone number: " << phone_number << std::endl;
+	std::cout << "Darkest secret: " << darkset_secret << std::endl;
+}
