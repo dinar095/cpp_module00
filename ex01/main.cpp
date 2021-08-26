@@ -19,20 +19,21 @@ int main(void)
 	std::string buf;
 	Contact	contact[8];
 	Phonebook phone;
-	int index;
+	int maxindex;
 
-	index = 1;
+	maxindex = 8;
 	phone.set_contact(contact);
 	while (1)
 	{
 		std::cout << "Please input action : ";
-		std::cin >> buf;
-
+		std::getline(std::cin, buf);
 		if (buf == "ADD")
-			phone.addContact(index);
+			phone.addContact(maxindex);
 		else if (buf == "SEARCH")
 			std::cout << "SEARCH\n";
 		else if (buf == "EXIT")
 			break;
+		else
+			std::cout << "ADD - add new contact, SEARCH - search contact, EXIT - exit" << std::endl;
 	}
 }

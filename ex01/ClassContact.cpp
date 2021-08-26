@@ -45,6 +45,7 @@ void Contact::set_id(std::string value)
 void Contact::fieldContact(int index)
 {
 	id = index;
+
 	std::cout << "First name: ";
 	std::getline(std::cin, first_name);
 

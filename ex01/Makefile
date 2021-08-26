@@ -1,11 +1,12 @@
-NAME = megaphone
+NAME = phonebook
 
 CC = clang++
 CFLAGS = -Wall -Wextra -Werror
-FUNCTIONS = megaphone
+FUNCTIONS = ClassContact main Phonebook
 
 OBJ = $(patsubst %,%.o,$(FUNCTIONS))
 SRC = $(patsubst %,%.cpp,$(FUNCTIONS))
+HEADER = ClassContact.hpp Phonebook.h
 
 .PHONY: all clean fclean re
 
@@ -14,7 +15,7 @@ all: $(NAME)
 obj_f: $(SRC)
 	$(CC) CFLAGS = -Wall -Wextra -Werror -c $(SRC)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(HEADER)
 	$(CC) $(SRC) -o $(NAME)
 
 
@@ -24,6 +25,6 @@ clean:
 fclean: clean
 	rm -rf $(NAME)
 
-re: fclean all
+re:	fclean all
 
-.PHONY:		all clean fclean re
+.PHONY:	all clean fclean re
