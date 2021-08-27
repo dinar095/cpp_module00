@@ -1,4 +1,10 @@
-//
-// Created by Deckard Sausages on 8/26/21.
-//
+#include "Account.hpp"
+#include <ctime>
 
+static void Account::_displayTimestamp()
+{
+	std::time_t time;
+
+	time = std::time(time);
+
+}

@@ -1,3 +1,4 @@
+#include <cstdlib>
 #include "Phonebook.h"
 
 void Phonebook::set_contact(Contact *value)
@@ -34,12 +35,16 @@ void Phonebook::showContacts()
 void Phonebook::expandContact()
 {
 	std::string	buf;
+	unsigned int ind;
+
+	ind = -1;
 	while (1)
 	{
 		std::cout << "Index: ";
 		std::getline(std::cin, buf);
 		if (buf.empty())
 			break;
-		if (buf.)
+		if ((ind = std::atoi(buf.c_str())) > 0 && ind <= count)
+			contact[ind-1].view();
 	}
 }
