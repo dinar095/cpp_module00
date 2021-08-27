@@ -5,7 +5,13 @@
 #include <time.h>
 
 
-int counttt = 0;
+
+int Account::_nbAccounts;
+int Account::_totalAmount;
+int Account::_totalNbDeposits;
+int Account::_totalNbWithdrawals;
+int indx = 0;
+
 
 void Account::_displayTimestamp()
 {
@@ -18,32 +24,39 @@ void Account::_displayTimestamp()
     strftime (buffer,80,"[%Y%m%d_%H%M%S]",timeinfo);
     std::cout << buffer;
 }
-
-
- void Account::displayAccountsInfos( void )
+void Account::displayAccountsInfos( void )
 {
     _displayTimestamp();
-    getNbAccounts();
-    getTotalAmount();
+    std::cout << "accounts:" << _nbAccounts
+                << ";total:" << _totalAmount
+                << ";deposits:" << _totalNbDeposits
+                << "withdrawals:" << _totalNbWithdrawals << std::endl;
 
 }
-
 Account::Account( int initial_deposit )
 {
-    Account Accountqwer;
-    Accountqwer._nbDeposits = initial_deposit;
-    _displayTimestamp();
-    std::cout << " index:" << counttt << ";amount:" << initial_deposit << ";created" << std::endl;
-    counttt++;
+    indx++;
+    _accountIndex = indx;
     Account();
+    _amount = initial_deposit;
+    _totalAmount += _amount;
+    _displayTimestamp();
+    std::cout << " index:" << _accountIndex << ";amount:" << _amount << ";created" << std::endl;
+
 }
 
 Account::Account(void)
 {
-    int index;
-    index = counttt;
-    _accountIndex = index++;
-}
+    this->_accountIndex = indx;
+//    _amount = 0;
+    _nbDeposits = 0;
+    _nbWithdrawals = 0;
+    _nbAccounts++;
+    _totalNbDeposits = 0;
+    _totalNbWithdrawals = 0;
+    std::cout << _accountIndex << std::endl;
+
+    }
 
 int Account::getNbWithdrawals(void) {
     return 0;
@@ -52,6 +65,11 @@ int Account::getNbWithdrawals(void) {
 Account::~Account(void)
 {
 
+}
+
+void Account::displayStatus(void) const
+{
+//    std::cout <<
 }
 
 
