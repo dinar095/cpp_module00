@@ -62,14 +62,22 @@ void Contact::fieldContact(int index)
 	std::getline(std::cin, darkset_secret);
 }
 
+std::string Contact::checkLength(std::string str)
+{
+	if (str.length() > 9)
+	{
+		str = str.substr(0, 9) + ".";
+		return str;
+	}
+	return str;
+}
+
 void Contact::preview()
 {
 	std::cout << std::right << std::setw(10) << id << "|";
-	std::cout << std::right << std::setw(10) << first_name << "|";
-	std::cout << std::right << std::setw(10) << last_name << "|";
-	std::cout << std::right << std::setw(10) << nickname << "|" << std::endl;
-//	std::cout << std::right << std::setw(10) << phone_number << "|";
-//	std::cout << std::right << std::setw(10) << darkset_secret << "|";
+	std::cout << std::right << std::setw(10) << checkLength(first_name) << "|";
+	std::cout << std::right << std::setw(10) << checkLength(last_name) << "|";
+	std::cout << std::right << std::setw(10) << checkLength(nickname) << "|" << std::endl;
 }
 
 void Contact::view()

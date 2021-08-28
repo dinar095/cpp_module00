@@ -21,7 +21,7 @@ void Phonebook::addContact(unsigned int maxindex)
 void Phonebook::showContacts()
 {
 	std::cout << "=================================================" << std::endl;
-	std::cout << std::right << std::setw(10) << "index" << "|";
+	std::cout << std::right << std::setw(10) << "Index" << "|";
 	std::cout << std::right << std::setw(10) << "First name" << "|";
 	std::cout << std::right << std::setw(10) << "Last name" << "|";
 	std::cout << std::right << std::setw(10) << "Nickname" << "|" << std::endl;
