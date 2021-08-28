@@ -45,21 +45,34 @@ void Contact::set_id(std::string value)
 void Contact::fieldContact(int index)
 {
 	id = index;
+	bool t = 1;
 
 	std::cout << "First name: ";
-	std::getline(std::cin, first_name);
+	t = std::getline(std::cin, first_name);
 
-	std::cout << "Last name: ";
-	std::getline(std::cin, last_name);
+	if (t)
+	{
+		std::cout << "Last name: ";
+		t = std::getline(std::cin, last_name);
+	}
 
-	std::cout << "Nickname: ";
-	std::getline(std::cin, nickname);
+	if (t)
+	{
+		std::cout << "Nickname: ";
+		t = std::getline(std::cin, nickname);
+	}
 
-	std::cout << "Phone_number: ";
-	std::getline(std::cin, phone_number);
+	if (t)
+	{
+		std::cout << "Phone_number: ";
+		t = std::getline(std::cin, phone_number);
+	}
 
-	std::cout << "Darkest secret: ";
-	std::getline(std::cin, darkset_secret);
+	if (t)
+	{
+		std::cout << "Darkest secret: ";
+		std::getline(std::cin, darkset_secret);
+	}
 }
 
 std::string Contact::checkLength(std::string str)

@@ -19,12 +19,12 @@ int main(void)
 	std::string buf;
 	Contact	contact[8];
 	Phonebook phone;
+	int i;
 
 	phone.set_contact(contact);
-	while (1)
+	std::cout << "ADD - add new contact, SEARCH - search contact, EXIT - exit" << std::endl;
+	while (std::cout << "Please input action : " && std::getline(std::cin, buf))
 	{
-		std::cout << "Please input action : ";
-		std::getline(std::cin, buf);
 		if (buf == "ADD" || buf == "add")
 			phone.addContact(8);
 		else if (buf == "SEARCH" || buf == "search")

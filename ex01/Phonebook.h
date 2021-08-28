@@ -14,6 +14,7 @@ public:
 	void	addContact(unsigned int maxindex);
 	void	showContacts();
 	void	expandContact();
+	int		writeComm(char *str);
 };
 
 

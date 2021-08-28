@@ -38,10 +38,8 @@ void Phonebook::expandContact()
 	unsigned int ind;
 
 	ind = -1;
-	while (1)
+	while (std::cout << "Index: " && std::getline(std::cin, buf))
 	{
-		std::cout << "Index: ";
-		std::getline(std::cin, buf);
 		if (buf.empty())
 			break;
 		if ((ind = std::atoi(buf.c_str())) > 0 && ind <= count)
