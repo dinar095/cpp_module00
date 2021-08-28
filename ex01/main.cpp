@@ -27,9 +27,9 @@ int main(void)
 		std::getline(std::cin, buf);
 		if (buf == "ADD" || buf == "add")
 			phone.addContact(8);
-		else if (buf == "SEARCH" || buf == "ss")
+		else if (buf == "SEARCH" || buf == "search")
 			phone.showContacts();
-		else if (buf == "EXIT")
+		else if (buf == "EXIT" || buf == "exit")
 			break;
 		else
 			std::cout << "ADD - add new contact, SEARCH - search contact, EXIT - exit" << std::endl;

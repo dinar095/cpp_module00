@@ -46,5 +46,7 @@ void Phonebook::expandContact()
 			break;
 		if ((ind = std::atoi(buf.c_str())) > 0 && ind <= count)
 			contact[ind-1].view();
+		else
+			std::cout << "Invalid Index" << std::endl;
 	}
 }

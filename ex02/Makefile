@@ -1,12 +1,12 @@
-NAME = phonebook
+NAME = account
 
 CC = clang++
 CFLAGS = -Wall -Wextra -Werror
-FUNCTIONS = ClassContact main Phonebook
+FUNCTIONS = Account tests
 
 OBJ = $(patsubst %,%.o,$(FUNCTIONS))
 SRC = $(patsubst %,%.cpp,$(FUNCTIONS))
-HEADER = ClassContact.hpp Phonebook.h
+HEADER = Account.hpp
 
 .PHONY: all clean fclean re
 

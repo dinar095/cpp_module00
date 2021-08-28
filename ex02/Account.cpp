@@ -80,6 +80,7 @@ bool Account::makeWithdrawal(int withdrawal)
     _totalNbWithdrawals++;
     std::cout << ";withdrawal:" << withdrawal << ";amount;" << _amount <<
                 ";nb_withdrawals:" << _nbWithdrawals <<  std::endl;
+	return (true);
 }
 
 void Account::makeDeposit(int deposit)
